@@ -8,7 +8,6 @@ const {
 
 router.get('/', getMovies);
 router.post('/', createMovie);
-
 router.delete('/:movieId', celebrate({
   params: Joi.object().keys({
     movieId: Joi.string().hex().length(24),

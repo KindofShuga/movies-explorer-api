@@ -11,9 +11,9 @@ const getMovies = (req, res, next) => {
 };
 
 const createMovie = (req, res, next) => {
-  // const { name, link } = req.body;
-  // const owner = req.user._id;
-  Movie.create(req.body)
+  const data = req.body;
+  const ownerId = req.user._id;
+  Movie.create({ ...data, owner: ownerId })
     .then((user) => res.status(STATUS_CREATED).send(user))
     .catch((err) => {
       if (err.name === 'ValidationError') {

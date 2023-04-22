@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.statics.findUserByCredentials = function (email, password) {
+userSchema.statics.findUserByCredentials = function findOne(email, password) {
   return this.findOne({ email }).select('+password')
     .then((user) => {
       if (!user) {
@@ -47,7 +47,6 @@ userSchema.statics.findUserByCredentials = function (email, password) {
 
 userSchema.set('toJSON', {
   transform(doc, ret) {
-    // eslint-disable-next-line no-param-reassign
     delete ret.password;
     return ret;
   },
