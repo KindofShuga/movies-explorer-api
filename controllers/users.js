@@ -46,7 +46,9 @@ const updateUser = (req, res, next) => {
     })
     .then((user) => res.status(STATUS_OK).send({ data: user }))
     .catch((err) => {
-      if (err.name === 'ValidationError') {
+      if (err.code === 11000) {
+        next(new Conflicted());
+      } else if (err.name === 'ValidationError') {
         next(new BadRequest());
       } else {
         next(err);
