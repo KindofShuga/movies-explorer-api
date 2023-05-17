@@ -6,13 +6,11 @@
 
 Директории
 /routes — папка с файлами роутера
-/controllers — папка с файлами контроллеров пользователя и карточки
-/models — папка с файлами описания схем пользователя и карточки
+/controllers — папка с файлами контроллеров пользователя и фильма
+/models — папка с файлами описания схем пользователя и фильма
 
 ## Ссылки на проект
 
-<!-- IP 158.160.17.189
+IP 51.250.104.31
 
-Frontend https://mesto.alinat.nomoredomains.work
-
-Backend https://api.mesto.alinat.nomoredomains.work -->
+Backend https://api.movies-explorer.alina.nomoredomains.monster

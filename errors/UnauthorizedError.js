@@ -3,7 +3,7 @@ const { STATUS_UNAUTHORIZED } = require('./statuses');
 
 class UnauthorizedError extends AplicationError {
   constructor() {
-    super(STATUS_UNAUTHORIZED, 'Incorrect email or password');
+    super(STATUS_UNAUTHORIZED, 'Authorization required');
   }
 }
 
