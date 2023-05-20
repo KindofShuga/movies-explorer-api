@@ -1,8 +1,7 @@
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
-  'https://movies-explorer.alinat.nomoredomains.monster/',
-  'http://movies-explorer.alinat.nomoredomains.monster/',
-  'https://localhost:3000',
+  'https://movies-explorer.alinat.nomoredomains.monster',
+  'http://movies-explorer.alinat.nomoredomains.monster',
   'http://localhost:3000',
 ];
 
@@ -12,6 +11,7 @@ module.exports = (req, res, next) => {
   const { origin } = req.headers;
   const { method } = req;
   const requestHeaders = req.headers['access-control-request-headers'];
+  res.header('Access-Control-Allow-Credentials', true);
 
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
