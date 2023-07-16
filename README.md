@@ -1,14 +1,30 @@
 # Проект Movies-explorer `backend`  
 ###### Репозиторий бэкенд-части приложения Movies-explorer.
 
-___
-
 ### :clipboard: __Описание:__
 
-`«Movies-explorer»` — завершающий дипломный проект ***[на платформе Яндекс.Практикум](https://practicum.yandex.ru/)***. Проект представляет собой сервис поиска и сохранения фимльмов по ключевым словам.
+`«Movies-explorer»` — завершающий дипломный проект ***[на платформе Яндекс.Практикум](https://practicum.yandex.ru/)***. Проект представляет собой сервис поиска и сохранения фильмов по ключевым словам.
+
 ### **[Сайт](https://movies-explorer.alinat.nomoredomains.monster/)**
+### **[Репозиторий с фронтендом](https://github.com/KindofShuga/movies-explorer-frontend)**
 
 ___
+
+### :mag: __Обзор:__
+:link: [__Функционал__](https://github.com/KindofShuga/movies-explorer-api/tree/main#bookmark_tabs-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB)  
+  
+:link: [__Технологии__](https://github.com/KindofShuga/movies-explorer-api/tree/main#wrench-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8)  
+  
+:link: [__Директории__](https://github.com/KindofShuga/movies-explorer-api/tree/main#open_file_folder-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B8)  
+  
+:link: [__Версии зависимостей__](https://github.com/KindofShuga/movies-explorer-api/tree/main#arrow_up_small-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B5%D0%B9)  
+  
+:link: [__Запуск__](https://github.com/KindofShuga/movies-explorer-api/tree/main#bulb-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA)  
+  
+:link: [__Дополнительные ссылки__](https://github.com/KindofShuga/movies-explorer-api/tree/main#link-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8)  
+
+___
+
 
 ### :bookmark_tabs: __Функционал:__
 
@@ -19,7 +35,7 @@ ___
 - Маршруты, требующие входа, защищены [мидлвэром авторизации](https://github.com/KindofShuga/movies-explorer-api/blob/main/middlewares/auth.js), базируется на [`jsonwebtoken`](https://github.com/auth0/node-jsonwebtoken#readme).
 - Обработка CORS через [мидлвэр](https://github.com/KindofShuga/movies-explorer-api/blob/main/middlewares/corsHandler.js).
 - Логирование [запросов и ошибок](https://github.com/KindofShuga/movies-explorer-api/blob/main/middlewares/logger.js), с помощью [`winston`](https://github.com/winstonjs/winston) и [`express-winston`](https://www.npmjs.com/package/express-winston). 
-- Ограничение количества запросов мидлвэром [`express-rate-limit`](https://www.npmjs.com/package/express-rate-limit)
+- Ограничение количества запросов мидлвэром [`express-rate-limit`](https://www.npmjs.com/package/express-rate-limit).
 - Безопасные заголовки HTTP модулем [`helmet`](https://www.npmjs.com/package/helmet).
 - Автоматический перезапуск приложения утилитой [`nodemon`](https://nodemon.io/), при изменении файлов проекта.
 ___
@@ -29,7 +45,7 @@ ___
 - [`Yandex.Cloud`](https://cloud.yandex.ru/services/compute) — Виртуальная машина.
 - `Ubuntu` — ОС.
 - `pm2` — Менеджер процессов на сервере.
-- `LetsencryptSSL` — Сертификаты от Letsencrypt
+- `LetsencryptSSL` — Сертификаты от Letsencrypt.
 - `Mongoose` — Библиотека для работы с БД.
 - `ESlint` — Библиотека-линтер, анализирует код на ошибки.
 ___
@@ -63,8 +79,10 @@ ____
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.22"
+___
 
 ### :bulb: __Запуск:__
+*__Примечание__: для корректной работы, потребуется заменить все запросы к API на localhost.*
 
 - #### __Развернуть API:__
 | Команда | Описание |
@@ -84,9 +102,10 @@ ____
 
 ### :link: __Дополнительные ссылки__
 - __Проект__:
-    - [`Репозиторий с Фронтендом`](https://github.com/KindofShuga/movies-explorer-frontend)   
-    - `Домен бэкенда` — https://api.movies-explorer.alina.nomoredomains.monster
-    - `Домен фронтенда` — https://movies-explorer.alinat.nomoredomains.monster
+    - Домен бэкенда — https://api.movies-explorer.alina.nomoredomains.monster
+    - Домен фронтенда — https://movies-explorer.alinat.nomoredomains.monster
+    - Домен со сторонним API фильмов — https://api.nomoreparties.co/beatfilm-movies
+    - Публичный IP адрес — 51.250.109.233  
 
 - __Материалы Яндекса__:  
     - [`Чек-лист диплома`](https://code.s3.yandex.net/web-developer/static/new-program/web-diploma-criteria-2.0/index.html)  
